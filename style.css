@@ -9,9 +9,6 @@ body {
     font-family: sans-serif;
     background-color: #ffffff;
 }
-header{
-  
-}
 .header_top{
     display: flex;
     align-items: center;
@@ -96,7 +93,28 @@ header{
     max-height: 500px;
     
 }
-
+.titulo{
+    background: #ffffff;
+    min-height: 10px;
+    padding: 15px 0 0 0;
+    
+}
+.titulo h1{
+    margin: 0;
+    font-size: 34px;
+    font-weight: bold;
+    color: #192461;
+    font-family: 'Poppins', sans-serif;
+    line-height: 0.5;
+}
+hr {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 20px 0;
+    width: 500px;
+    display: flex;
+    align-items: center;
+  }
 .carrusel h1{
     padding: 2rem 0px 0px 5px;
     font-size: 17px;
@@ -193,6 +211,13 @@ header{
 }
 .ropa{
     background-image: url(./img/taza.jpg);
+    background-size: cover;
+    min-height: 10vh;
+    background-attachment: fixed;
+    
+}
+.club{
+    background-image: url(./img/club.jpg);
     background-size: cover;
     min-height: 10vh;
     background-attachment: fixed;
@@ -388,7 +413,11 @@ header{
     }
 
 }
-
+.previa-carrusel{
+    display: none;
+    min-height: 12vh;
+    color: #fff;
+}
 @media (max-width: 540px) {
     .header_bot img{
         display: none;
@@ -396,15 +425,94 @@ header{
     .header_top{
         display: none;
     }
+    .carrusel .slide{
+        text-align: center;
+        display: none;
+        
+    }
+    .carrusel{
+        background-attachment: fixed;
+        background-image: url(./img/reemplazo.jpg);
+        min-height: 10vh;
+        text-align: center;
+    }
+    .carrusel img{
+        display: none;
+    }
+    .carrusel h1{
+        padding: 1rem;
+        color: #dfdede;
+    }
+    .carrusel p{
+        padding: 0 1rem;
+    }
+    .previa-carrusel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cuadro_uno h1 {
+        margin-right: 0.2rem;
+        margin-left: 1rem;
+        font-size: 25px;
+        margin-top: 1rem;
+    }
+    .cuadro_uno p {
+        margin-right: 0.2rem;
+        margin-left: 1rem;
+    }
+    .cuadro_uno{
+        min-height: 10vh;
+        flex-wrap: wrap ;
+        text-align: center;
+    }
+    .cuadro_uno img{
+        margin:0;
+        margin-top: 1.5rem;
+        width: 30%;
+        border-radius: 70%;
+        box-shadow: rgba(0, 133, 250, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    }
+    .barra_boton{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nosotros img{
+        display: none;
+    }
+    .nosotros{
+        text-align: center;
+    }
+    .nosotros h1{
+        font-size: 25px;
+    }
+    .v{
+      
+        margin: 0;
+    }
+
 }
+
+@media (max-width: 454px){
+    .navbar a {
+        font-size: 14px;
+        font-weight: 900;
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+}
+    
 
 .productos{
     background: #ffffff;
-    padding: 50px 0;
+    padding: 25px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     
 }
 .product-container {
@@ -421,11 +529,6 @@ header{
     margin: 0px 30px;
   }
 
-  @media (max-width: 1440px){
-    .productos{
-        flex-direction: column;
-    }
-  }
   
   .product-image {
     width: 100%;
@@ -454,9 +557,10 @@ header{
   }
   
   .product-info p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     text-align: justify;
+    font-family: 'Poppins', sans-serif;
   }
   
   .interest-button {
@@ -482,3 +586,4 @@ header{
   .interest-button:hover {
     background-color: #0062cc;
   }
+
