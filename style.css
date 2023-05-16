@@ -9,7 +9,9 @@ body {
     font-family: sans-serif;
     background-color: #ffffff;
 }
+
 .header_top{
+    z-index: 999;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -53,31 +55,55 @@ body {
     height: 65px;
     background: #192461;
     width: 100%;
-    
 }
 .navbar {
+    z-index: 9999;
     display: flex;
-    margin-right: 10px;
-    
+    margin-right: 30px;
+    list-style-type: none;
+    margin-top: 15px;
 }
 .logo img{
     width: 100px;
 }
-.navbar a {
+.navbar li a {
     display: block;
     color: #ffffff;
     font-size: 14px;
     font-weight: 900;
     font-family: 'Montserrat';
+    text-align: center;
+    padding: 5px 16px;
     text-decoration: none;
-    padding: 1rem;
-    margin: 0.5rem;
-}
-.navbar a:hover {
-    background: #223183;
-    border-radius: 1rem;
-    align-self: center;
-}
+  }
+.dropdown {
+    position: relative;
+  }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #192461;
+    padding: 30px 0px;
+    min-width: 100px;
+    height: 185px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding: 16px 20px;
+  }
+  .dropdown-content a:hover{
+    background-color: #0062cc;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.navbar li {
+    float: left;
+  }
 .content {
     min-height: 45vh;
     display: flex;
@@ -587,3 +613,49 @@ hr {
     background-color: #0062cc;
   }
 
+.boton{
+    display: flex;
+    flex-direction: row;
+    min-height: 5vh;
+    background: #ffffff;
+    justify-content: center;
+}
+.button-62 a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+  }
+.button-62 {
+    background: linear-gradient(to bottom right, #ffffff, #ffffff);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    margin-right: 20px;
+  }
+  
+  .button-62:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(71, 74, 239, 0.5), .125rem .125rem 1rem rgba(90, 156, 255, 0.5);
+  }
+  
+  .button-62:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(71, 74, 239, 0.5), .125rem .125rem 1rem rgba(90, 148, 255, 0.5);
+  }
